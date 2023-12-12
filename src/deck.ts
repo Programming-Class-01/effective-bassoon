@@ -1,7 +1,26 @@
-const cardArray = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+const cardArray = [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+];
 
 //TODO: figure out how to replace these with the correct unicode characters
-const suits = [`clubs`, `diamonds`, `hearts`, `spades`];
+const suits = [
+    `clubs`,
+    `diamonds`,
+    `hearts`, 
+    `spades`,
+];
 
 const faces = [
     `two`,
@@ -16,16 +35,16 @@ const faces = [
     `jack`,
     `queen`,
     `king`,
-    `ace`];
+    `ace`
+];
 
-const player = [`Player A`, `Player B`];
 
 interface IDeck {
-    cardArray: [],
-    suits: [],
-    faces: [],
-    player: [],
+    card: {
+        points: number | undefined
+        suit: string | undefined
+        face: string | undefined
+    };
+}[]
 
-}
-
-export { cardArray, suits, faces, player, IDeck};
+export { cardArray, suits, faces, IDeck};
