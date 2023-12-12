@@ -1,6 +1,6 @@
 import { cardArray, suits, faces, IDeck } from "./deck";
 
-function deckGenerator(): IDeck {
+function deckGenerator(): IDeck[] {
     const newDeck: IDeck[] = [];
     for (let i = 0; i < suits.length; i++) { //this should never exceed 3.
         for (let c = 0; c < cardArray.length; c++) { //this should never exceed 13.
@@ -15,11 +15,10 @@ function deckGenerator(): IDeck {
             // }
             const card = { points: cardArray[c], suit: suits[i], face: faces[c] }
             newDeck.push({card})
-            console.log(card)
         }
     }
     console.log(newDeck)
-    return;
+    return newDeck;
 }
 
 deckGenerator();
