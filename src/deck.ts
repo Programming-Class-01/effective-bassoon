@@ -41,9 +41,9 @@ const faces = [
 
 interface IDeck {
     card: {
-        points: number | undefined
-        suit: string | undefined
-        face: string | undefined
+        points: number,
+        suit: string,
+        face: string,
     };
 }[]
 
