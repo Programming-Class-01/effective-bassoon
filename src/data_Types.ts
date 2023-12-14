@@ -16,10 +16,10 @@ const cardArray = [
 
 //TODO: figure out how to replace these with the correct unicode characters
 const suits = [
-    `clubs`,
-    `diamonds`,
-    `hearts`, 
-    `spades`,
+    `♣`,
+    `♦`,
+    `♥`,
+    `♠`,
 ];
 
 const faces = [
@@ -39,12 +39,10 @@ const faces = [
 ];
 
 
-interface IDeck {
-    card: {
-        points: number,
-        suit: string,
-        face: string,
-    };
-}[]
+interface ICard {
+    points: number,
+    suit: string,
+    face: string,
+}
 
-export { cardArray, suits, faces, IDeck};
+export { cardArray, suits, faces, ICard };
