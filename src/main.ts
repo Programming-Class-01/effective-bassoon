@@ -1,5 +1,3 @@
-import { shuffler } from "./shuffler";
+import { playerDeckGenerator } from "./playerDeck";
 
-console.log(`Hello Dev`);
-
-console.log(shuffler());
+console.log(playerDeckGenerator(2))

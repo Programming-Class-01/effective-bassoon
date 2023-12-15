@@ -45,4 +45,9 @@ interface ICard {
     face: string,
 }
 
-export { cardArray, suits, faces, ICard };
+interface IDeck {
+    player: number;
+    card: ICard;
+}
+
+export { cardArray, suits, faces, ICard, IDeck };
