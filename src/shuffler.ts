@@ -8,7 +8,7 @@ function shuffler(): ICard[] | Error {
     if (orderedDeck instanceof Error) return Error(`deckGenerator threw an error`)
     
     const shuffledDeck: ICard[] = []
-    // Checked the size to make sure it's safe to slice for performance.
+    // Checked the size to make sure it's safe to splice for performance.
     if (orderedDeck.length > MAX_DECK_SIZE) return Error(`Stop being stupid. MAX_DECK_SIZE less than deck length.`)
     const iterations = orderedDeck.length
     for (let i = 0; i < iterations; i++) {

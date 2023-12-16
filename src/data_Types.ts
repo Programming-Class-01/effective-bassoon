@@ -14,7 +14,6 @@ const cardArray = [
     14,
 ];
 
-//TODO: figure out how to replace these with the correct unicode characters
 const suits = [
     `♣`,
     `♦`,
@@ -45,9 +44,6 @@ interface ICard {
     face: string,
 }
 
-interface IDeck {
-    player: number;
-    card: ICard;
-}
 
-export { cardArray, suits, faces, ICard, IDeck };
+
+export { cardArray, suits, faces, ICard };

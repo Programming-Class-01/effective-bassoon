@@ -1,19 +1,18 @@
 import { shuffler } from "./shuffler";
+import { ICard } from "./data_Types";
 
-function playerDeckGenerator(players: number) {
+//this is logically broken. Fix it
+
+// Supposed take a player number, generate that many decks of shuffled cards.
+
+function playerDeckGenerator(players: number): ICard[][] | Error {
     const playerDecks = []
-    for (let i = 1; i <= players; i++) {
-        const playerDeck = []
-        const player = i
-        const testDeck = shuffler()
-        if (testDeck instanceof Error) return Error(`shuffler call failure`)
-        const assignedDeck = testDeck
-        playerDeck.push({ player: player, deck: assignedDeck })
-        playerDecks.push(playerDeck)
+    for (let i = 0; i < players; i++) {
+        const shuffledDeck = shuffler()
+        if (shuffledDeck instanceof Error) return Error(`Shuffler function spat out an Error, check it`)
+        playerDecks.push(shuffledDeck)
     }
     return playerDecks
 }
-
-console.log(playerDeckGenerator(2))
 
 export { playerDeckGenerator }
